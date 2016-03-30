@@ -5,8 +5,8 @@ MAINTAINER Viacheslav Pryimak <vpryimak@intropro.com"
 RUN apt-get update && \
   apt-get -y upgrade && \
   apt-get -y install wget libssl1.0.0 python openjdk-7-jre nload && \
-  #wget -q https://download.elastic.co/logstash/logstash/packages/debian/logstash_2.2.2-1_all.deb -O logstash.deb && \
-  wget -q https://download.elastic.co/logstash/logstash/packages/debian/logstash_1.4.2-1-2c0f5a1_all.deb -O logstash.deb && \
+  wget -q https://download.elastic.co/logstash/logstash/packages/debian/logstash_2.2.2-1_all.deb -O logstash.deb && \
+  #wget -q https://download.elastic.co/logstash/logstash/packages/debian/logstash_1.4.2-1-2c0f5a1_all.deb -O logstash.deb && \
   dpkg -i logstash.deb && \
   rm logstash.deb 
 
