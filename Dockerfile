@@ -14,6 +14,8 @@ ADD ./conf.d /etc/logstash/conf.d
 ADD ./ssl    /etc/logstash/ssl
 ADD ./src    /
 RUN chmod +x /usr/local/sbin/start.sh
+RUN touch /var/log/logstash/logstash.log
+RUN chmod 777 /var/log/logstash/logstash.log
 ##################### INSTALLATION END #####################
 
 ENTRYPOINT ["/usr/local/sbin/start.sh"]
